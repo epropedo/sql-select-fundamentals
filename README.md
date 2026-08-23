@@ -4,17 +4,17 @@ Este repositorio contiene las consultas SQL realizadas para la práctica de fund
 
 ## ¿Por qué es mala práctica usar SELECT * en producción?
 
-`SELECT *` permite seleccionar todas las columnas de una tabla. Puede ser útil durante la exploración inicial de los datos, pero no se recomienda utilizarlo habitualmente en ambientes de producción.
+SELECT * permite seleccionar todas las columnas de una tabla. Puede ser útil durante la exploración inicial de los datos, pero no se recomienda utilizarlo habitualmente en ambientes de producción.
 
 Algunas razones son:
 
 ### 1. Rendimiento
 
-`SELECT *` puede traer columnas que no necesitamos. Si una tabla tiene muchas columnas o contiene grandes cantidades de datos, esto puede aumentar el volumen de información transferida y afectar el rendimiento.
+SELECT * puede traer columnas que no necesitamos. Si una tabla tiene muchas columnas o contiene grandes cantidades de datos, esto puede aumentar el volumen de información transferida y afectar el rendimiento.
 
 Por ejemplo, si solamente necesitamos:
 
-```sql
+sql
 SELECT customer_id, total_amount
 FROM sales;
 
